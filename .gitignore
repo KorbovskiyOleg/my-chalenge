@@ -1,0 +1,14 @@
+```
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.env.local
+.env.*
+.vscode/
+.idea/
+*.log
+*.tmp
+*.swp
+```
