@@ -11,7 +11,10 @@ class SimpleArray:
     def get(self, index):
         return self.data[index]
 
-
+    def reset(self):
+        self.capacity = 5 
+        self.data = [None]* self.capacity
+        return self.data
 
 sa = SimpleArray()
 sa.set(1,'A')
@@ -20,3 +23,7 @@ sa.set(3, 'C')
 sa.set(4, 'B')
 
 print(sa.get(4))
+print(sa.data)
+
+sa.reset()
+print(sa.data)
