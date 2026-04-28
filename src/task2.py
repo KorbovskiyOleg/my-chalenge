@@ -10,11 +10,10 @@ class SimpleArray:
 
     def get(self, index):
         return self.data[index]
-
+    
+    # методы которые изменяют объект не возвращают значений!!!!Запомним!!
     def reset(self):
-        self.capacity = 5 
-        self.data = [None]* self.capacity
-        return self.data
+        self.data = [None]*self.capacity 
 
 sa = SimpleArray()
 sa.set(1,'A')
