@@ -1,8 +1,9 @@
 # создпние динамического массива
 
-class DinamicArray:
-    def __init__(self):
-        self.capacity = 5
+class DynamicArray:
+    def __init__(self, capacity = 5):
+        self.clean_capacity = capacity # вводим переменную для начального состояния мощности
+        self.capacity = self.clean_capacity
         self.data = [None]* self.capacity
         self.length = 0
 
@@ -18,9 +19,13 @@ class DinamicArray:
             self.data = new_data
 
         self.data[self.length]= value
-        #self.length +=1
+        self.length +=1
 
-da = DinamicArray()
+    def reset(self):
+        self.data = [None]*self.clean_capacity
+        self.length =0
+
+da = DynamicArray()
 da.append('a')
 da.append('b')
 da.append('c')
@@ -31,6 +36,8 @@ da.append('o')
 da.append('b')
 da.append('r')
 
+print(da.data)
+da.reset()
 print(da.data)
 
 
