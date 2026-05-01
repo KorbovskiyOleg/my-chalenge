@@ -16,10 +16,14 @@ n2.next = n3
 # проходим по цепочке
 
 curr = n1
+step = 0
 
 while curr is not None:
-    print(f"{curr.value}")
+    print(f"шаг: {step}, значение: {curr.value}")
+    #curr = curr.next
+    step +=1 # по правидам ставим счетчик перед сдвигом указателя
     curr = curr.next
+
 
 
     
